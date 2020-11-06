@@ -1,0 +1,265 @@
+@font-face {
+    font-family: AGENTORANGE;
+    src: url('../font/AGENTORANGE.TTF');
+}
+
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+	font-family: AGENTORANGE;
+	overflow: hidden;
+}
+
+
+/*body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(../images/join_1.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
+
+
+
+
+/***************************************************************************/
+/***************************************************************************/
+.window{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 85%;
+}
+.window .window-elements{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.window .window-elements img{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 200%;
+	height: 100%;
+}
+
+/************* title *************/
+.window .window-elements .title{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 25px;
+	width: 800px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 55px;
+	font-weight: bold;
+	text-align: center;
+	color: rgba(243, 156, 18,1.0);
+	/*text-shadow: 3px 3px 5px white;*/
+}
+
+/*********** mario *********/
+.window .window-elements #mario{
+	position: absolute;
+	height: 90px;
+	width: 50px;
+	left: 40%;
+	bottom: 50px;
+}
+.window .window-elements #mario .mario-stack-images{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.window .window-elements #mario .mario-stack-images img{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.window .window-elements #mario .mario-stack-images img:nth-child(1){
+	opacity: 0;
+}
+.window .window-elements #ground{
+	position: absolute;
+	height: 30px;
+	width: 50px;
+	border-radius: 50%;
+	left: 40%;
+	bottom: 40px;
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 10px black;
+}
+
+/****** obstacles *****/
+.window .window-elements .obstacle{
+	position: absolute;
+	left: 100%;
+	bottom: 45px;
+}
+.window .window-elements .obstacle .obstacle-stack-images{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.window .window-elements .obstacle .obstacle-stack-images img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/******* canvas *******/
+.window .window-elements #canvas{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+/***************************************************************************/
+/***************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************/
+/***************************************************************************/
+.score-board{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 25px;
+	width: 100%;
+	height: 15%;
+	bottom: 0;
+	background-color: rgba(245,175,65,1);
+}
+.score-board .score-baord-elements{
+	position: relative;
+	height: 100%;
+	width: 90%;
+	display: none;
+	/*background-color: orange;*/
+}
+.score, .level, .life {
+	position: absolute;
+	width: 350px;
+	height: 95%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	font-size: 35px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+}
+.score{
+	left: 0;
+}
+.level{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.life{
+	right: 0;
+}
+.mario-life{
+	width: 40px;
+	height: 50px;
+}
+
+
+.score-board .score-baord-elements .life span,
+.score-board .score-baord-elements .level span,
+.score-board .score-baord-elements .score span{
+	color: brown;
+/*	text-shadow: 1px 1px 1px black;*/
+}
+/***************************************************************************/
+/***************************************************************************/
+
+
+
+
+
+
+
+
+/***************************************************************************/
+/***************************************************************************/
+.message-board,
+.loading{
+	position: absolute;
+	width: 100%;
+	height: 85%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: #D35400;*/
+	background-color: rgba(245,175,65,1);
+	text-align: center;
+	color: #333;
+}
+/*.loading{
+	opacity: 0.5;
+}*/
+.loading h1{
+	margin-top: 125px;	
+}
+.message-board .text{
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	padding: 50px;
+	font-size: 30px;
+	line-height: 50px;
+}
+.message-board .mario-status{
+	position: relative;
+	width: 250px;
+	height: 250px;
+}
+.message-board .mario-status img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.message-board .button{
+	width: 300px;
+	height: auto;
+	padding: 15px;
+	margin: 0 auto;
+	margin-top: 50px;
+	font-size: 30px;
+	box-shadow: 3px 3px 10px #333;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.message-board .button:hover{
+	transform: scale(.98);
+	box-shadow: 1px 1px 3px #333;
+}
+/***************************************************************************/
+/***************************************************************************/

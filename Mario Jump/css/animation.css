@@ -1,0 +1,19 @@
+/************************** background animation ***************************/
+.background-animation{
+	animation: background-animation 12s linear 0s infinite  running;
+	-webkit-animation: background-animation 12s linear 0s infinite  running;
+	-moz-animation: background-animation 12s linear 0s infinite  running;
+}
+@-webkit-keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}
+@-moz-keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}
+@keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}
+/************************** end of backgroun animation *********************/

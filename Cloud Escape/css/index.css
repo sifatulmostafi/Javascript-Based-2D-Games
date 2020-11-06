@@ -1,0 +1,77 @@
+*{
+	margin: 0 auto;
+	padding:  0 auto;
+}
+
+body {
+	overflow: hidden;
+}
+
+.window{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+.window .window-elements{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #81CEE8;
+	overflow: hidden;
+}
+
+.window .window-elements .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 200%;
+	height: 100%;
+}
+
+.window .window-elements div.box{
+	position: absolute;
+	width: 130px;
+	height: 80px;
+	/*background-color: red;*/
+}
+
+.window .window-elements div.box img{
+	width: 100%;
+	height: 100%;
+	transition-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.background-animation{
+	animation: background-animation 30s linear 0s infinite  running;
+	-webkit-animation: background-animation 30s linear 0s infinite  running;
+	-moz-animation: background-animation 30s linear 0s infinite  running;
+}
+@-webkit-keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}
+@-moz-keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}
+@keyframes background-animation{
+	0%{ margin-left: 0%; }
+	100%{ margin-left: -100%; }
+}

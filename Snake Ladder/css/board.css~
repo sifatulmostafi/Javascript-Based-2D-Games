@@ -1,0 +1,512 @@
+
+.headline{
+	position: absolute;
+	font-size: 50px;
+	font-family: 'Lobster Two', cursive;
+	color: rgba(129,206,232,.3);
+	font-style: italic;
+	text-align: center;
+	font-weight: bold;
+	top: 50px;
+	left: -235px;
+	right: 0;
+	margin-left:auto;
+    margin-right:auto;
+	text-shadow: 1px 7px 0px #34495E;
+}
+
+#board{
+	position: absolute;
+
+	width: 1005px;
+	height: 469px;
+	left: -150px;
+	right: 0px;
+	bottom: -200px;
+	margin-left:auto;
+    margin-right:auto;
+    top: 180px;
+    animation: board-animation 5s ease-in-out 0s infinite alternate running;
+	-webkit-animation: board-animation 5s ease-in-out 0s infinite alternate running;
+}
+@-webkit-keyframes boarad-animation{
+	0% { transform: rotateZ(-.1deg) rotateX(10deg); }
+	100% { transform: rotateZ(.1deg) rotateX(-10deg); }
+}
+@keyframes board-animation{
+	0% { transform: rotateZ(-.1deg) rotateX(10deg); }
+	100% { transform: rotateZ(.1deg) rotateX(-10deg); }
+}
+#board #board-elements{
+	position: relative;
+}
+
+#board #board-elements img{
+	width: 100%;
+	height: 100%;
+}
+
+#board #board-elements .element_under_board{
+	position: absolute;
+}
+
+
+
+/* css for background of some blocks */
+#board #board-elements #i_94{
+	background: url('../images/owl.gif') no-repeat center center; 
+	background-size: cover;
+}
+#board #board-elements #i_6{
+	background: url('../images/guitar.gif') no-repeat center center; 
+	background-size: cover;
+}
+#i_27{
+	background: url('../images/bear.png') no-repeat center center; 
+	background-size: cover;
+}
+/* end css for background of some blocks */
+
+
+
+
+/* start of css for ladders */
+#board #board-elements #ladder_01{
+	width: 150px;
+	height: 190px;
+	left: 200px;
+	top: 240px;
+}
+#board #board-elements #ladder_02{
+	width: 90px;
+	height: 200px;
+	left: 825px;
+	top: 105px;
+	transform: rotateZ(18deg) rotateX(10deg);
+}
+#board #board-elements #ladder_03{
+	width: 90px;
+	height: 125px;
+	left: 555px;
+	top: 40px;	
+	transform: rotateZ(5deg) rotateX(10deg);
+}
+#board #board-elements #ladder_04{
+	width: 35px;
+	height: 125px;
+	left: 50px;
+	top: 105px;
+	transform: rotateZ(23deg);
+}
+/* end of css for ladders */
+
+
+
+
+
+
+/* start of css for snakes */
+#board #board-elements #snake_01{
+	width: 80px;
+	height: 200px;
+	left: 680px;
+	top: 170px;
+}
+#board #board-elements #snake_02{
+	width: 100px;
+	height: 90px;
+	left: 215px;
+	top: 100px;
+}
+#board #board-elements #snake_03{
+	width: 400px;
+	height: 70px;
+	left: 265px;
+	top: 155px;
+	transform: rotateZ(52deg);
+}
+#board #board-elements #snake_04{
+	width: 100px;
+	height: 110px;
+	left: 760px;
+	top: 15px;
+}
+/* end of css for snakes */
+
+
+
+
+
+/* css for .blocks */
+#board #board-elements .block{
+	position: absolute;
+
+	width: 65px;
+	height: 50px;
+	padding-top: 15px;
+
+	font-size: 150%;
+	font-family: Helvetica, Arial;
+	font-style: italic;
+	/*font-weight: bold;*/
+	text-align: center;
+	color: #34495E;
+
+	border: 1px solid #1ABC9C;
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px #1ABC9C;
+}
+/* end of css for .blocks */
+
+
+
+/* css for vehicle */
+#board #board-elements .vehicle{
+	position: absolute;
+
+	width: 65px;
+	height: 65px;
+
+	transition: transform 2s linear;
+}
+#board #board-elements .vehicle img{
+	width: 100%;
+	height: 100%;
+}
+#board #board-elements #train_01{
+	left: 500px;
+	top: 200px;
+}
+/* end of css for vehicle */
+
+
+
+/* css for button */
+#add-player-window #add-player-button,
+#add-player-window #add-player-cancel-button,
+#board #board-elements #rotate-dice-button,
+#join-button,
+#start-game-button,
+#restart-button
+{
+	position: absolute;
+	width: 190px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	color: #34495E;
+	font-size: 20px;
+	
+	background-color: #FCBAAE;
+	border: 2px solid #D2527F;
+	border-radius: 5%;
+	box-shadow: 5px 5px 10px #D2527F;
+	
+	cursor: pointer;
+	transition: all .3s ease;
+}
+#join-button{
+	width: 100px;
+	left: 1045px;
+	top: 70px;
+}
+#board #board-elements #rotate-dice-button{
+	width: 200px;
+	left: 650px;
+	top: 420px;
+}
+#add-player-window #add-player-cancel-button{
+	top: 500px;
+	left: -550px;
+}
+#add-player-window #add-player-button{
+	top: 425px;
+	left: -550px;
+}
+
+#start-game-button{
+	top: 275px;
+	height: 55px;
+	width: 450px;
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+#add-player-window #add-player-button:hover,
+#add-player-window #add-player-cancel-button:hover,
+#board #board-elements #rotate-dice-button:hover,
+#join-button:hover,
+#restart-button:hover
+{
+	box-shadow: 5px 5px 20px #D2527F;
+	transform: scale(1.05);
+}
+/* end of css for button */
+
+
+/* css for add-player-window*/
+#add-player-window{
+	position: absolute;
+
+	width: 1050px;
+	height: 675px;
+	
+	left: -150px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+    top: -675px;
+
+	background-color: rgba(0,0,0,.5);
+}
+/* end of css for add-player-window */
+
+#add-player-window #choose-name input{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 90px;
+	outline: none;
+	width: 70%;
+	text-align: center;
+	height: 70px;
+	background-color: rgba(0,0,0,0.5);
+	padding: 10px;
+	font-size: 55px;
+	color: pink;
+	text-shadow: 1px 1px 2px black;
+	font-family: 'Lobster Two', cursive;
+	border-radius: 5%;
+}
+
+#add-player-window #choose-name input:focus{
+	outline:none;
+	box-shadow: 5px 5px 20px #D2527F;
+}
+
+#add-player-window #choose-name{
+	position: absolute;
+	width: 50%;
+}
+
+#add-player-window #choose-avatar{
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	/*background-color: red;*/
+}
+
+#add-player-window #choose-name h1,
+#add-player-window #choose-avatar h1
+{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: -20px;
+	font-family: 'Lobster Two', cursive;
+	color: pink;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba(147,17,71,0.5);
+	border-radius: 3%;
+	text-shadow: 1px 1px 1px black;
+}
+
+#add-player-window #choose-avatar .image{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-top: 60px;
+	margin-left: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#add-player-window #choose-avatar .image img{
+	width: 100%;
+	height: 100%;
+}
+
+#add-player-window #choose-avatar .image:hover{
+	transform: scale(1.3);
+}
+
+/* css for dice */
+#dice{
+	position: absolute;
+	
+	width: 50px;
+	height: 50px;
+	top: 375px;
+	left: -150px;
+	right: 0;
+	margin-left:auto;
+    margin-right:auto;
+
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Lobster Two', cursive;
+	text-align: center;
+	color: #34495E;
+
+	background-color: #FCBAAE;
+	border: 1px solid #D2527F;
+	border-radius: 50%;
+	box-shadow: 0px 0px 100px violet;
+	
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+/* end of css for dice */
+
+
+
+/* css for player */
+#board #board-elements .player{
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	animation: player-animation .3s linear 0s infinite alternate running;
+	-webkit-animation: player-animation .3s linear 0s infinite alternate running;
+	-moz-animation: player-animation .3s linear 0s infinite alternate running;
+}
+@-webkit-keyframes player-animation{
+	0%{ transform: scale(1); }
+	100%{ transform: scale(1.3);}
+}
+@-moz-keyframes player-animation{
+	0%{ transform: scale(1); }
+	100%{ transform: scale(1.3);}
+}
+@keyframes my{
+	0%{ transform: scale(1); }
+	100%{ transform: scale(1.3);}
+}
+#board #board-elements .player #player-element{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#board #board-elements .player #player-element #player-arrow{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: -70px;
+	opacity: 0;
+}
+#board #board-elements .player #player-element #player-arrow img{
+	width: 100%;
+	height: 100%;
+}
+#board #board-elements .player #player-element #player-name{
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	left: 0;
+	right: 0;
+	margin-left:auto;
+	background-color: pink;
+	border: 1px solid #D2527F;
+	box-shadow: 1px 1px 5px #D2527F;
+    margin-right:auto;
+    top:-20px;
+    font-size: 95%;
+	text-align: center;
+	overflow: hidden;
+	color: black;
+}
+#board #board-elements .player #player-element #player-avatar{
+	width: 100%;
+	height: 100%;
+}
+#board #board-elements .player #player-element #player-avatar img{
+	width: 100%;
+	height: 100%;
+}
+/* end of css for player */
+
+
+/* css for result */
+#result{
+	position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: -650px;
+    width: 1000px;
+    height: 400px;
+    padding: 100px;
+    padding-top: 50px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #D2527F;
+	border-radius: 1%;
+	box-shadow: 0px 0px 100px #D2527F;
+    text-align: center;
+}
+
+#result #winner-avatar{
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	animation: player-animation .3s linear 0s infinite alternate running;
+	-webkit-animation: player-animation .3s linear 0s infinite alternate running;
+	-moz-animation: player-animation .3s linear 0s infinite alternate running;;
+}
+
+#result #winner-avatar img{
+	height: 100%;
+	width: 100%;
+}
+
+#result h2{
+	color: pink;
+	font-family: 'Lobster Two', cursive;
+	text-shadow: 5px 5px 5px rgba(0,0,0,.9);
+	font-size: 50px;
+}
+
+#result h2 span{
+	font-size: 100px;
+}
+/* end of css for result */
+
+
+
+/* css for start */
+#start{
+	position: absolute;
+
+	background: cover;
+	height: 100%;
+	
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,.95);
+}
+#start #start-game-button{
+	animation: button_animation 1s ease-in-out 0s infinite alternate running;
+	-webkit-animation: button_animation 1s ease-in-out 0s infinite alternate running;
+}
+@-webkit-keyframes button_animation {
+	-1% { transform: scale(1); }
+	100% { transform: scale(1.2); }
+}
+@keyframes button_animation{
+	0% { transform: scale(1); }
+	100% { transform: scale(1.2); }
+}
+/* end of css for start */

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mario</title>
+
+	<!-- importing css -->
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="font/css/font-awesome.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/loading.css">
+
+</head>
+<body>
+	
+	<!-- container starts -->
+	<div class="container">
+
+		<!-- window starts -->
+	  	<div class="window">
+	  		<!-- window-elements starts -->
+	  		<div class="window-elements">
+
+	  			<!-- background starts -->
+	  			<img class="background background-animation" src="images/background/background_1.jpg" alt="">
+				<!-- background ends -->
+
+		  		<!-- title starts -->
+				<div class="title">
+					MARIO JUMP !!
+				</div>
+				<!-- title ends -->
+
+			  	<!-- ground stars -->
+			  	<div id="ground">
+			  	</div>
+				<!-- ground ends -->
+	  			
+	  			<!-- mario starts -->
+			  	<div id="mario">
+			  		<div class="mario-stack-images">
+			  			<img src="images/mario/jump.png" alt="">
+				  		<img src="images/mario/mario.gif" alt="">
+			  		</div>
+			  	</div>
+				<!-- mario ends -->
+
+				<!-- start of obsacle -->
+				<div class="obstacle">
+					<div class="obstacle-stack-images">
+					</div>
+				</div>
+				<!-- end of obstacle -->
+	  			
+	  			<!-- canvas starts -->
+				<canvas id="canvas"></canvas>
+				<!-- end of canvas -->
+	  		</div>
+	  		<!-- window elements ends -->
+	  	</div>
+		<!-- window ends -->
+
+		<!-- score-board starts -->
+		<div class="score-board">
+			<div class="score-baord-elements">
+				<div class="score">
+					SCORE: <span>0</span>
+				</div>
+				<div class="level">
+					LEVEL: <span>1</span>
+				</div>
+				<div class="life">
+					LIFE: <span>3</span> X
+					<img style="float: right" class="mario-life" src="images/mario-life.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- score-board-ends-->
+
+		<!-- message-board starts -->
+		<div class="message-board">
+			<div class="text">
+				WELCOME TO MARIO JUMP ADVENTURE !!
+			</div>
+			<div class="mario-status">
+				<img style="opacity: 0" src="images/mario-dead.png" alt="">
+				<img src="images/mario-life.png" alt="">
+			</div>
+			<div class="button">
+				Start Game
+			</div>
+		</div>
+		<!-- message-board ends -->
+
+		<!-- loading starts -->
+		<div class="loading">
+			<h1>LOADING</h1>
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
+		</div>
+		<!-- loading ends -->
+	</div>
+	<!-- container ends -->
+	
+	
+
+
+	<!-- audio files -->
+	<audio volume="1" autoplay loop>
+	  <source src="sound/background-music.ogg" type="audio/ogg">
+	</audio>
+	<audio id="jump-sound">
+	  <source src="sound/jump-sound.ogg" type="audio/ogg">
+	</audio>
+
+	<audio id="failure-sound" >
+	  <source src="sound/failure-sound.ogg" type="audio/ogg">
+	</audio>
+
+	<!-- <audio id="success-move-sound" >
+	  <source src="sound/button-bounce.ogg" type="audio/ogg">
+	  <source src="sound/success-move.mp3" type="audio/mp3">
+	</audio> -->
+
+
+
+	<!-- importing javascritp -->
+	<script type="text/javascript" src="javascript/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="javascript/prefixfree.min.js"></script>
+	<script type="text/javascript" src="javascript/foggy.js"></script>
+	<script type="text/javascript" src="javascript/index.js"></script>
+</body>
+</html>
